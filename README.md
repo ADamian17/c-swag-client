@@ -34,7 +34,7 @@
 [ api reference by Rapiapi clothes ](https://rapidapi.com/apidojo/api/hm-hennes-mauritz?endpoint=apiendpoint_2ac3208c-3dd6-4ef5-8fd4-63fc4d599088)
 
 
-```javascript
+<!-- ```javascript
 /* fetch example */
 const [ allMakeup, setAllMakeup ] = useState([]);
 
@@ -64,4 +64,4 @@ const [ allMakeup, setAllMakeup ] = useState([]);
       
     }
   }
-```
+``` -->
