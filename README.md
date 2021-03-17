@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# AD-SWAG Clothing
+### User Stories
+- User will land in the main gallery
+- in the gallery the user will see all products
+- in the top ot the page the user can use the navagation bar to navegati the app
+- by clicking in one of the product the user can see the product details
+- in the product details the user can add the product to the cart 
+- by clicking in the cart the user can see the items that they added 
+- if the cart is epmty the user can not see go to checkout button
+- else show go to checkout button
+- at checkout the user can choose to check out as guess
+- user will need to provide address, phone #, and email   
+  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### MVP
+- Customer can view products
+- Customer can add products to cart
+- Customer can make an order
+- Customer can view/track order
 
-## Available Scripts
+### Takes away
+- Usage of commercial APIs suite
+- Understanding of common API patterns and architecture
+- Understanding of data structures, JSON creation and consumption
+- Commercial cart flow from a developer's perspective
+- Exposure to a payment provider's processing flow
 
-In the project directory, you can run:
+[ Data Flow ](./react.drawio)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- TODO -->
+<!-- choose a payment gateway provider (i.e. Stripe or Paypal) -->
+### Resources
+[ api reference by Rapiapi clothes ](https://rapidapi.com/apidojo/api/hm-hennes-mauritz?endpoint=apiendpoint_2ac3208c-3dd6-4ef5-8fd4-63fc4d599088)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+```javascript
+/* fetch example */
+const [ allMakeup, setAllMakeup ] = useState([]);
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  useEffect(() => {
+    fetMakeup()
+  }, [])
 
-### `npm run build`
+  const fetMakeup = async () => {
+    try {
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+      const res = await fetch("https://makeup.p.rapidapi.com/products.json", {
+        headers: {
+          "x-rapidapi-key": "15e17ee08dmsh62fb1686560c453p107df8jsn42ae32d3fd24",
+          "x-rapidapi-host": "makeup.p.rapidapi.com",
+          "useQueryString": true
+        }
+      });
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+      const data = await res.json();
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+      const lipLiner = data.filter((item) => item.category === 'pencil' );
+      console.log({lipLiner});
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+      setAllMakeup(lipLiner);
+      
+    } catch (error) {
+      
+    }
+  }
+```
