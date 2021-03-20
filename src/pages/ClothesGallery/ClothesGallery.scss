@@ -1,0 +1,15 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @media screen and ( max-width: 375px ) {
+    width: 100%;
+  }
+}
