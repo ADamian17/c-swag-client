@@ -7,7 +7,7 @@ import './ProductsGallery.scss'
 const ClothesGallery = () => {
 
   const [products] = useProduct();
-
+  console.log( { products: products } )
   return (
     <>
       {

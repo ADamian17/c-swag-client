@@ -1,10 +1,19 @@
+import { cartItems } from '../../../recoil/cart/cart.atoms';
+import { useRecoilState } from 'recoil';
+
+import { addItem } from '../../../utils/functs';
+
 import './ProductCard.scss';
 
-const ProductCard = ({ product }) => (
-  // <Link className="card__link" to={{
-  //   pathname: `/products/${product.defaultArticle.code}`,
-  //   state: { img: product.images[0].url }
-  // }}>
+const ProductCard = ({ product }) => {
+  const [ cart, setCart ] = useRecoilState(cartItems);
+  
+  const handleAddToCart = () => {
+    const items = addItem( cart, product );
+    setCart(items)
+  }
+
+  return (
     <div className="card" key={product.pk}>
       <div className="card__img">
         <img src={product.images[0].url} alt="img" />
@@ -16,10 +25,10 @@ const ProductCard = ({ product }) => (
           <small>{product.price.value} USD</small>
         </div>
 
-        <button>add to cart</button>
+        <button onClick={handleAddToCart}>add to cart</button>
       </div>
     </div>
-  // </Link>
-);
+  )
+};
 
 export default ProductCard;

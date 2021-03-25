@@ -7,6 +7,6 @@ export const cartItemsCount = selector({
   get: ({ get }) => {
     const items = get(cartItems)
     
-    return items;
+    return items.reduce( ( acc, item ) => acc + item.quantity, 0 );
   } 
 })

@@ -1,13 +1,17 @@
 import { useWindowSize } from '../../hooks/useWinddowSize';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
+
+import { cartItemsCount } from '../../recoil/cart/cart.selectors';
+import { useRecoilValue } from 'recoil'; 
 
 import HamburgerMenu from '../UI/HamburgerMenu/HamburgerMenu';
+import Cart from '../Cart/Cart';
 
 import './Navbar.scss';
 
 const Navbar = () => {
   const windowSize = useWindowSize()
-  console.log(windowSize);
+  const itemsCount = useRecoilValue(cartItemsCount);
 
   return (
     <nav className="nav">
@@ -17,12 +21,7 @@ const Navbar = () => {
             <li className="nav__item">
               <Link to="/">Home</Link> 
             </li>
-            <li className="nav__item">
-              <Link to="#">Categories</Link> 
-            </li>
-            <li className="nav__item">
-              <Link to="#">Cart</Link>  
-            </li>
+            <Cart itemsCount={itemsCount} />  
           </ul>
         ) : (
           <HamburgerMenu />
