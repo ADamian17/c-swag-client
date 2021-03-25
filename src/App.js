@@ -10,10 +10,11 @@ import "./App.scss";
 
 const App = () => {
   const [ show, setShow ] = useRecoilState(toggleCart);
+
   return (
     <>
       <Navbar />
-      <main onClick={() => setShow(!show)}>
+      <main onClick={ show ? () => setShow(!show) : ''}>
         <Routes />
       </main>
     </>
