@@ -1,0 +1,52 @@
+@import '../../sass/abstracts/variables';
+
+.cart {
+  position: relative;
+
+  &__count {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 35px;
+    background-color: #a52a2a;
+    color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+  }
+
+  &__preview {
+    position: absolute;
+    top: 4rem;
+    background-color: $default-color-light;
+    width: 40rem;
+    min-height: 10rem;
+    border-radius: .4rem;
+    box-shadow: 0 0 .3rem $default-color-dark;
+
+    &__list {
+      background-color: inherit;
+      min-height: 10rem;
+    }
+  }
+  
+  &__link {
+    background-color: #a52a2a;
+    height: 5rem;
+    color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 10rem;
+  }
+}
