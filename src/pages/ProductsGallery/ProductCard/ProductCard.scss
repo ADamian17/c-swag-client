@@ -27,10 +27,14 @@
 
   &__info {
     height: 20%;
-    padding: 1.5rem;
+    padding: 1.5rem 2.5rem;
     flex: 1;
     font-weight: 700;
     line-height: 3rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     small {
       color: #f49a0b;
