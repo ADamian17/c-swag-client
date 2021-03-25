@@ -1,0 +1,45 @@
+@import '../../sass/abstracts/variables';
+
+.nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  border-bottom: 1px solid $color-grey-1;
+  text-transform: uppercase;
+  background-color: $default-color-light;
+
+  &__list {
+    width: 32.5rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    @media screen and ( max-width: 50rem ) {
+      width: 100%;
+    }
+
+  }
+  
+  &__item {
+    
+    a {
+      text-decoration: none;
+
+      &:visited,
+      &:active {
+        color: $default-color-dark;
+      }
+    }
+    
+    &:hover {
+      cursor: pointer;
+    }
+  } 
+}
