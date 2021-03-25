@@ -7,6 +7,8 @@ import { RecoilRoot } from "recoil";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+import './index.scss';
+
 ReactDOM.render(
   <React.StrictMode>
     <RecoilRoot>

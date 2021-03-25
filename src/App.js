@@ -1,14 +1,19 @@
 import Routes from "./config/routes";
 
+import Navbar from './components/Navbar/Navbar';
+
+
+
+
 import "./App.scss";
 
 const App = () => {
   return (
     <>
-      <nav>
-        <h1>AD SWAG</h1>
-      </nav>
-      <Routes />
+      <Navbar />
+      <main>
+        <Routes />
+      </main>
     </>
   );
 };
