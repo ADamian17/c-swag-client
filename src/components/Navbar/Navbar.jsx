@@ -1,13 +1,14 @@
 import { useWindowSize } from '../../hooks/useWinddowSize';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 import HamburgerMenu from '../UI/HamburgerMenu/HamburgerMenu';
+import Cart from '../Cart/Cart';
+// import HomeIcon from '../../Icons/HomeIcon';
 
 import './Navbar.scss';
 
 const Navbar = () => {
   const windowSize = useWindowSize()
-  console.log(windowSize);
 
   return (
     <nav className="nav">
@@ -17,12 +18,7 @@ const Navbar = () => {
             <li className="nav__item">
               <Link to="/">Home</Link> 
             </li>
-            <li className="nav__item">
-              <Link to="#">Categories</Link> 
-            </li>
-            <li className="nav__item">
-              <Link to="#">Cart</Link>  
-            </li>
+            <Cart />  
           </ul>
         ) : (
           <HamburgerMenu />

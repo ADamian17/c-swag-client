@@ -7,6 +7,22 @@ export const cartItemsCount = selector({
   get: ({ get }) => {
     const items = get(cartItems)
     
-    return items;
-  } 
-})
+    return items.reduce( ( acc, item ) => acc + item.quantity, 0 );
+  }
+});
+
+export const cartItemsTotal = selector({
+  key: 'cartItemsTotal',
+  get: ({ get }) => {
+    const items = get(cartItems).map( item => item.total )
+    
+    if ( items.length > 0 ) { 
+      
+      const total = items.reduce( ( acc, item ) => acc + item );
+      console.log('from selector', { total })
+      return total 
+    };
+
+    return 0;
+  }
+});
