@@ -5,7 +5,6 @@ import { toggleCart } from '../../recoil/cart/cart.atoms';
 import { useRecoilValue, useRecoilState } from 'recoil'; 
 
 import CartPreview from './CartPreview/CartPreview';
-// import CartIcon from '../../Icons/CartIcon';
 
 import './Cart.scss';
 

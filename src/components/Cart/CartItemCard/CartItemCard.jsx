@@ -7,7 +7,7 @@ const CartItemCard = ({ item }) => {
 
   const { defaultArticle, quantity } =  item;
   const itemName = truncateString( defaultArticle.name, 12 );
-  console.log({item});
+  
   return (
     <article className="preview">
       <section className="preview__aside">
