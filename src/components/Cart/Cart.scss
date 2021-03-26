@@ -8,8 +8,8 @@
     height: 20px;
     border-radius: 50%;
     position: absolute;
-    top: -10px;
-    left: 35px;
+    top: -.8rem;
+    left: 4.5rem;
     background-color: #a52a2a;
     color: #f0f8ff;
     display: flex;
@@ -19,27 +19,34 @@
   }
 
   &__preview {
-    position: absolute;
-    top: 4rem;
-    background-color: $default-color-light;
     width: 40rem;
+    padding: 1.2rem;
     min-height: 10rem;
+    background-color: $default-color-light;
     border-radius: .4rem;
     box-shadow: 0 0 .3rem $default-color-dark;
+
+    position: absolute;
+    top: 4rem;
 
     &__list {
       background-color: inherit;
       min-height: 10rem;
+      display: flex;
+      flex-direction: column
     }
   }
   
   &__link {
     background-color: #a52a2a;
+    border-radius: .4rem;
+    box-shadow: 0 0 .3rem $default-color-dark;
     height: 5rem;
     color: #f0f8ff;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: .7rem;
   }
 
   &__empty {

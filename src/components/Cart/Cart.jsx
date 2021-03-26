@@ -4,6 +4,9 @@ import { cartItemsCount } from '../../recoil/cart/cart.selectors';
 import { toggleCart } from '../../recoil/cart/cart.atoms';
 import { useRecoilValue, useRecoilState } from 'recoil'; 
 
+import CartPreview from './CartPreview/CartPreview';
+// import CartIcon from '../../Icons/CartIcon';
+
 import './Cart.scss';
 
 const Cart = () => {
@@ -12,7 +15,7 @@ const Cart = () => {
 
   return (
     <li className="nav__item cart" onClick={() => setShow(!show) }>
-      <p>Cart { itemsCount !== 0 ? <div className="cart__count">{itemsCount}</div> : '' }</p>
+      Cart { itemsCount !== 0 ? <div className="cart__count">{itemsCount}</div> : '' }
       {
         show ? 
           <div className="cart__preview">
@@ -26,7 +29,7 @@ const Cart = () => {
                   </Link>
 
                   <div className="cart__preview__list">
-                    1
+                    <CartPreview />
                   </div>
                 </> 
               : 

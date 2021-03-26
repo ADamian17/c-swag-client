@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import HamburgerMenu from '../UI/HamburgerMenu/HamburgerMenu';
 import Cart from '../Cart/Cart';
+// import HomeIcon from '../../Icons/HomeIcon';
 
 import './Navbar.scss';
 

@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <main onClick={ show ? () => setShow(!show) : ''}>
+      <main onClick={ show ? () => setShow(!show) : () => { return } }>
         <Routes />
       </main>
     </>
