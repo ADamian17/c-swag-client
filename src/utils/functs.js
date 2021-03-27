@@ -30,10 +30,7 @@ export const addItem = ( cartItems, selectedItem ) => {
 
 export const removeItem = ( cartItems, selectedItem ) => {
 
-  const foundItem = cartItems.indexOf( selectedItem.id );
+  const filterCartItem = cartItems.filter(( item ) => item.id !== selectedItem );
 
-  if ( foundItem ) {
-    console.log(foundItem)
-  }
-
+  return filterCartItem;
 }

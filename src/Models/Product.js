@@ -1,6 +1,6 @@
 class Product {
   static all = async () => {
-    const res =  await fetch('https://fakestoreapi.com/products');
+    const res =  await fetch('https://fakestoreapi.com/products?limit=9');
 
     return res.json()
   };
