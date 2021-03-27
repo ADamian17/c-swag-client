@@ -5,14 +5,14 @@ import './CartItemCard.scss';
 
 const CartItemCard = ({ item }) => {
 
-  const { defaultArticle, quantity } =  item;
-  const itemName = truncateString( defaultArticle.name, 12 );
+  const { quantity } =  item;
+  const itemName = truncateString( item.title, 12 );
   
   return (
     <article className="preview">
       <section className="preview__aside">
         <div className="preview__img">
-          <img src={defaultArticle.images[0].url} alt="avatar" />
+          <img src={item.image} alt="avatar" />
         </div>
 
         <small>{ itemName }</small>
@@ -21,7 +21,7 @@ const CartItemCard = ({ item }) => {
       <section className="preview__main">
         <small className="quantity">X {quantity}</small>
         <small className="price">
-          {item.total} {defaultArticle.whitePrice.currencyIso}
+          {item.total} $
         </small>
       </section>
     </article>

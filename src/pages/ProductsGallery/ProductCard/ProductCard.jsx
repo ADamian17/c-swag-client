@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
+
 import { cartItems } from '../../../recoil/cart/cart.atoms';
 import { useRecoilState } from 'recoil';
 
-import { addItem } from '../../../utils/functs';
+import { addItem, truncateString } from '../../../utils/functs';
 
 import './ProductCard.scss';
 
@@ -13,20 +15,22 @@ const ProductCard = ({ product }) => {
     setCart(items)
   }
 
+  const itemName = truncateString(product.title, 15)
+
   return (
-    <div className="card" key={product.pk}>
+    <div className="card" key={product.id}>
       <div className="card__img">
-        <img src={product.images[0].url} alt="img" />
+        <img src={product.image} alt="img" />
       </div>
-
-      <div className="card__info">
-        <div className="card__info__tex">
-          <p>{product.name}</p>
-          <small>{product.price.value} USD</small>
+        <div className="card__info">
+          <Link className="card__link" to={`/products/${product.id}`}>
+            <div className="card__info__tex">
+              <p>{itemName}</p>
+              <small>{product.price} USD</small>
+            </div>
+          </Link>
+            <button onClick={handleAddToCart}>add to cart</button>
         </div>
-
-        <button onClick={handleAddToCart}>add to cart</button>
-      </div>
     </div>
   )
 };

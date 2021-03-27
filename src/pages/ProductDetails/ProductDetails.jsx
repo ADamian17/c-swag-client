@@ -21,7 +21,7 @@ const ProductDetails = () => {
   const fetchProduct = async () => {
     try {
       const res = await Product.show(params.id);
-      setProduct(res.product);
+      setProduct(res);
       
     } catch (error) {
       console.log(error);
@@ -34,18 +34,16 @@ const ProductDetails = () => {
     product &&
     <Container>
       <article className="details-wrapper">
-
         <section className="details-wrapper__gallery">
           <div className="details-wrapper__item">
-            <img src={product.articlesList[1].galleryDetails[0].url} alt=""/>
+            <img src={product.image} alt="avatar" />
           </div>
         </section>
 
         <section className="details-wrapper__info">
-          <p>{product.name}</p>
+          <p>{product.title}</p>
           <p>{product.description}</p>
-          {product.inStock ? 'in stock' : 'out of stock'}
-          <small>{product.whitePrice.price} {product.whitePrice.currency}</small>
+          <small>{product.price}$</small>
         </section>
         
       </article>

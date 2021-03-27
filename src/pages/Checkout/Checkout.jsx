@@ -15,7 +15,7 @@ const Checkout = () => {
       <section className="checkout__aside">
         <div className="checkout__list">
           {
-            items.map(item => <CartItemCard key={item.code} item={item} /> )
+            items.map(item => <CartItemCard key={item.id} item={item} /> )
           }
         </div>
 
