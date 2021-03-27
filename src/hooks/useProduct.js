@@ -10,7 +10,7 @@ const useProduct = () => {
   const fetchProducts = async () => {
     try {
       const res = await Product.all();
-      setProducts(res.results);
+      setProducts(res);
     } catch (error) {
       console.log(error);
     }

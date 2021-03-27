@@ -7,8 +7,8 @@ const CartPreview = () => {
   const items = useRecoilValue(cartItems);
 
   return (
-    items.map( item => <CartItemCard key={item.code} item={item} />)
-  )
-}
+    items.map( item => <CartItemCard key={item.id} item={item} />)
+  );
+};
 
-export default CartPreview
+export default CartPreview;
