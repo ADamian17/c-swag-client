@@ -7,6 +7,9 @@ import { RecoilRoot } from "recoil";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+// semantic ui styles
+import 'semantic-ui-css/semantic.min.css'
+
 import './index.scss';
 
 ReactDOM.render(
