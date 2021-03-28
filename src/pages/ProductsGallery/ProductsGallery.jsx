@@ -1,0 +1,27 @@
+import useProduct from '../../hooks/useProduct';
+
+import ProductsList from './ProductsList/ProductsList';
+
+import './ProductsGallery.scss'
+
+const ClothesGallery = () => {
+
+  const [products] = useProduct();
+  console.log({ products });
+
+  return (
+    <>
+      {
+        products.length === 0 ? (
+          <div>Loading...</div>
+        ) : (
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <ProductsList products={products} />
+          </div>
+        )
+      }
+    </>
+  )
+}
+
+export default ClothesGallery;

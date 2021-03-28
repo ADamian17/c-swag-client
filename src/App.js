@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Routes from "./config/routes";
 
-function App() {
+import { useRecoilState } from "recoil";
+import { toggleCart } from "./recoil/cart/cart.atoms";
+
+import Navbar from "./components/Navbar/Navbar";
+import ContainerComponent from "./components/Container/Container";
+
+import "./App.scss";
+
+const App = () => {
+  const [show, setShow] = useRecoilState(toggleCart);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <main
+        onClick={
+          show
+            ? () => setShow(!show)
+            : () => {
+                return;
+              }
+        }
+      >
+        <ContainerComponent fluid={true}>
+          <Routes />
+        </ContainerComponent>
+      </main>
+    </>
   );
-}
+};
 
 export default App;
