@@ -1,8 +1,8 @@
+import { Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 
 
 // import { useWindowSize } from '../../hooks/useWinddowSize';
-// // import { Link } from 'react-router-dom';
 
 // import HamburgerMenu from '../UI/HamburgerMenu/HamburgerMenu';
 import Cart from '../Cart/Cart';
@@ -15,9 +15,9 @@ const NavbarComponent = () => {
   return (
     <Navbar className="justify-content-center shadow-sm" bg="light" fixed="top">
       <Nav.Item>
-        <Nav.Link href="/">Home</Nav.Link>
+        <Link to="/">Home</Link>
       </Nav.Item>
-      <Cart />  
+      <Cart />
     </Navbar>
   )
 }
