@@ -1,31 +1,25 @@
-import { useWindowSize } from '../../hooks/useWinddowSize';
-import { Link } from 'react-router-dom';
+import { Navbar, Nav } from 'react-bootstrap';
 
-import HamburgerMenu from '../UI/HamburgerMenu/HamburgerMenu';
+
+// import { useWindowSize } from '../../hooks/useWinddowSize';
+// // import { Link } from 'react-router-dom';
+
+// import HamburgerMenu from '../UI/HamburgerMenu/HamburgerMenu';
 import Cart from '../Cart/Cart';
 // import HomeIcon from '../../Icons/HomeIcon';
 
-import './Navbar.scss';
+// import './Navbar.scss';
 
-const Navbar = () => {
-  const windowSize = useWindowSize()
+const NavbarComponent = () => {
 
   return (
-    <nav className="nav">
-      {
-        windowSize.width > 400 ? (
-          <ul className="nav__list">
-            <li className="nav__item">
-              <Link to="/">Home</Link> 
-            </li>
-            <Cart />  
-          </ul>
-        ) : (
-          <HamburgerMenu />
-        )
-      }
-    </nav>
+    <Navbar className="justify-content-center shadow-sm" bg="light" fixed="top">
+      <Nav.Item>
+        <Nav.Link href="/">Home</Nav.Link>
+      </Nav.Item>
+      <Cart />  
+    </Navbar>
   )
 }
 
-export default Navbar;
+export default NavbarComponent;

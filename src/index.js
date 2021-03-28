@@ -7,6 +7,9 @@ import { RecoilRoot } from "recoil";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+// bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './index.scss';
 
 ReactDOM.render(
