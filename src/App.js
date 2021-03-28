@@ -1,3 +1,5 @@
+import { Container } from 'semantic-ui-react'
+
 import Routes from "./config/routes";
 
 import { useRecoilState } from 'recoil';
@@ -14,8 +16,10 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <main onClick={ show ? () => setShow(!show) : () => { return } }>
-        <Routes />
+      <main>
+        <Container>
+          <Routes />
+        </Container>
       </main>
     </>
   );

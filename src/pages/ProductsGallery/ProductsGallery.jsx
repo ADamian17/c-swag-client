@@ -1,3 +1,5 @@
+import { Card } from 'semantic-ui-react'
+
 import useProduct from '../../hooks/useProduct';
 
 import ProductsList from './ProductsList/ProductsList';
@@ -15,9 +17,9 @@ const ClothesGallery = () => {
         products.length === 0 ? (
           <div>Loading...</div>
         ) : (
-          <div className="gallery">
+          <Card.Group centered itemsPerRow={3}>
             <ProductsList products={products} />
-          </div>
+          </Card.Group>
         )
       }
     </>
