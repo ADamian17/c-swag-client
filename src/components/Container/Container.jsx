@@ -1,6 +1,7 @@
+import { Container } from 'react-bootstrap';
 import './Container.scss';
 
 /* type can be true or false */
-const Container = ({ children, fluid }) => <div className={ fluid ? "fluid" : "container" }>{ children }</div> 
+const ContainerComponnet = ({ children, type }) => <Container fluid={type ? 'xl' : ''}>{children}</Container>
 
-export default Container;
+export default ContainerComponnet;
