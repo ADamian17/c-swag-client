@@ -20,10 +20,10 @@ const ProductCard = ({ product }) => {
 
   return (
     <Col className="mb-5">
-      <Card className="shadow-sm">
-        <img className="my-card-img img-fluid img-thumbnail" src={product.image} alt="avatar" />
+      <Card className="p-3 shadow-sm">
+        <img className="my-card-img img-fluid img-thumbnail border-0 mb-3" src={product.image} alt="avatar" />
 
-        <Card.Body>
+        <Card.Body className="border-top">
           <Link className='card__link' to={`/products/${product.id}`}>
             <p className="card-text">{itemName}</p>
             <small className="price">{product.price} USD</small>
