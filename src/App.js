@@ -9,8 +9,8 @@ const App = () => {
     <>
       <Navbar />
       <main className="pt-5">
-        <div class="album py-5 bg-light">
-          <div class="container">
+        <div className="album py-5 bg-light">
+          <div className="container full--screen">
             <Routes />
           </div>
         </div>

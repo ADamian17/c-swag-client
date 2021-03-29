@@ -23,7 +23,7 @@ const ProductCard = ({ product }) => {
       <Card className="shadow-sm">
         <img className="my-card-img img-fluid img-thumbnail" src={product.image} alt="avatar" />
 
-        <div className="card-body">
+        <Card.Body>
           <Link className='card__link' to={`/products/${product.id}`}>
             <p className="card-text">{itemName}</p>
             <small className="price">{product.price} USD</small>
@@ -32,7 +32,7 @@ const ProductCard = ({ product }) => {
           <div className="d-flex justify-content-end align-items-center">
             <Button onClick={handleAddToCart} className="btn btn-sm btn-primary">Add to Cart</Button>
           </div>
-        </div>
+        </Card.Body>
       </Card>
     </Col>
   )

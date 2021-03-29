@@ -1,0 +1,47 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 84.1vh;
+
+  &__loading_wrapper {
+       &:not(:last-child) {
+           margin-right: 10px;
+       }
+  }
+
+   .loading__item {
+       display: inline-block;
+       height: 20px;
+       width: 20px;
+       margin: 10px;
+       border-radius: 50%;
+       background-color: #9d9a9a8c;
+       box-shadow: 0 0px 5px 3px #9d9a9aba;
+   }
+
+   .item1 {
+       animation: changeColor 1s infinite;
+   }
+   .item2 {
+       animation: changeColor 1s infinite .2s;
+   }
+   .item3 {
+       animation: changeColor 1s infinite .4s;
+   }
+
+}
+
+@keyframes changeColor {
+
+   from {
+       background-color: darken($color: #9d9a9a8c, $amount: 50);
+       box-shadow: 0 0px 5px 2px darken($color: #9d9a9a8c, $amount: 50);
+   }
+
+   to {
+       background-color: #9d9a9a8c;
+   }
+   
+}
