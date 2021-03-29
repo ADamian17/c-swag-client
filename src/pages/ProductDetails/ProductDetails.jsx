@@ -54,6 +54,8 @@ const ProductDetails = () => {
 
               <p className="lead">{product.description}</p>
 
+              <p className="lead">Price: {product.price}$</p>
+
               <div className="row">
                 <div className="col">
                   <button
