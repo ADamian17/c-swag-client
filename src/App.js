@@ -10,7 +10,7 @@ const App = () => {
       <Navbar />
       <main className="pt-5">
         <div className="album py-5 bg-light">
-          <div className="container full--screen">
+          <div className="container">
             <Routes />
           </div>
         </div>
