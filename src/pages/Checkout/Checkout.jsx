@@ -8,30 +8,29 @@ import CartItemCard from '../../components/Cart/CartItemCard/CartItemCard';
 import './Checkout.scss';
 
 const Checkout = () => {
-  const items = useRecoilValue( cartItems );
-  const total = useRecoilValue( cartItemsTotal ).toFixed(2);
-  
+  const items = useRecoilValue(cartItems);
+  const total = useRecoilValue(cartItemsTotal).toFixed(2);
+
   return (
-    <div className="checkout">
-      <section className="checkout__aside">
+    <div className="row featurette details-wrapper">
+      <div className="col">
         <div className="checkout__list">
           {
-            items.map(item => <CartItemCard key={item.id} item={item} /> )
+            items.map(item => <CartItemCard key={item.id} item={item} />)
           }
         </div>
+        <h4 className="checkout__total">total: <span className="text-danger">{total}$</span></h4>
+      </div>
 
-        <h4 className="checkout__total">total: {total}$</h4>
-      </section>
+      <div className="col text-info text-center">
+        <h2>*** Use this Card for payment ***</h2>
+        <h4 className="lead">test Card: <span className="text-danger">( 4242 - 4242 - 4242 - 4242 )</span></h4>
 
-      <section className="checkout__main">
-        <h1>Use this card for payment</h1>
-        <h2><span>card:</span> 4242 - 4242 - 4242 - 4242</h2>
-        <small>CVC: 123</small>
-        <small>Brand: Visa</small>
-        <small>Exp: 05/23</small>
-        <br />
-        <StripePayment price={total} /> 
-      </section>
+        <p className="lead">CVC: 123</p>
+        <p className="lead">Exp: 05/23</p>
+
+        <StripePayment price={total} />
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 @import '../../sass/abstracts/variables';
 
 .checkout {
-  width: 65%;
+  
   
   display: flex;
   
@@ -21,6 +21,7 @@
   }
 
   &__list {
+    width: 100%;
     border-bottom: 1px solid $default-color-dark;
   }
 
