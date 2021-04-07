@@ -1,8 +1,8 @@
 @import '../../../sass/abstracts/variables';
 
 .HamburgerMenu {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 2.5rem;
   padding: .6rem;
   margin-left: 1rem;
   display: flex;
@@ -38,7 +38,7 @@
         background-color: $default-color-dark;
         border-radius: 10rem;
         position: absolute;
-        width: 2.8rem;
+        width: 1.8rem;
         transform: rotate(-85deg);
         transform-origin: center;
       }

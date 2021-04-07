@@ -1,6 +1,3 @@
-import { Dropdown } from 'react-bootstrap';
-
-
 import { cartItems } from '../../../recoil/cart/cart.atoms';
 import { useRecoilState } from 'recoil';
 
@@ -16,9 +13,9 @@ const CartItemCard = ({ item }) => {
   const itemName = truncateString(item.title, 12);
 
   return (
-    <Dropdown.Item>
+    <li>
       <article className="preview">
-        <section className="preview__aside">
+        <section className="preview__aside p-1">
           <div className="preview__img">
             <img src={item.image} alt="avatar" />
           </div>
@@ -37,8 +34,9 @@ const CartItemCard = ({ item }) => {
           </small>
           <small onClick={() => setItems(removeItem(items, item.id))}>&#10005;</small>
         </section>
+
       </article>
-    </Dropdown.Item>
+    </li>
   )
 }
 

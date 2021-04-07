@@ -34,8 +34,6 @@ const ProductDetails = () => {
     }
   };
 
-  console.log({ product });
-
   return (
     <>
       {

@@ -13,7 +13,7 @@ const Checkout = () => {
 
   return (
     <div className="row featurette details-wrapper">
-      <div className="col">
+      <div className="col-md-5">
         <div className="checkout__list">
           {
             items.map(item => <CartItemCard key={item.id} item={item} />)
@@ -22,7 +22,7 @@ const Checkout = () => {
         <h4 className="checkout__total">total: <span className="text-danger">{total}$</span></h4>
       </div>
 
-      <div className="col text-info text-center">
+      <div className="col-md-7 text-info text-center">
         <h2>*** Use this Card for payment ***</h2>
         <h4 className="lead">test Card: <span className="text-danger">( 4242 - 4242 - 4242 - 4242 )</span></h4>
 

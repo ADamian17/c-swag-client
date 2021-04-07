@@ -16,25 +16,6 @@
     justify-content: center;
     align-items: center;
   }
-
-  &__preview {
-    width: 40rem;
-    padding: 1.2rem;
-    min-height: 10rem;
-    background-color: $default-color-light;
-    border-radius: .4rem;
-    box-shadow: 0 0 .3rem $default-color-dark;
-
-    position: absolute;
-    top: 4rem;
-
-    &__list {
-      background-color: inherit;
-      min-height: 10rem;
-      display: flex;
-      flex-direction: column
-    }
-  }
   
   &__link {
     background-color: #a52a2a;
@@ -49,6 +30,7 @@
   }
 
   &__empty {
+    width: 15rem;
     display: flex;
     justify-content: center;
     align-items: center;
