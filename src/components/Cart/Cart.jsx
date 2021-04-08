@@ -1,4 +1,3 @@
-import { NavDropdown, Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import { cartItemsCount } from '../../recoil/cart/cart.selectors';
@@ -13,13 +12,16 @@ const Cart = () => {
 
   return (
     <>
-      {itemsCount !== 0 ? <div className="cart__count">{itemsCount}</div> : ''}
-
      <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle" 
-          href="#" id="dropdown08" 
+        <Link className="nav-link dropdown-toggle" 
+          to="#" id="dropdown08" 
           data-bs-toggle="dropdown" 
-          aria-expanded="false">Cart</a>
+          aria-expanded="false">Cart 
+          { itemsCount !== 0 ? 
+            <span className="badge bg-danger text-light ml-1">{itemsCount}</span> 
+            : ''
+          }
+          </Link>
 
         <ul className="dropdown-menu p-2" aria-labelledby="dropdown08">
           <li>
