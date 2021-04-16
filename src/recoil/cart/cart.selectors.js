@@ -19,7 +19,6 @@ export const cartItemsTotal = selector({
     if ( items.length > 0 ) { 
       
       const total = items.reduce( ( acc, item ) => acc + item );
-      console.log('from selector', { total })
       return total 
     };
 
