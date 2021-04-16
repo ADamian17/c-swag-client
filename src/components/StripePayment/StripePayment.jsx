@@ -17,15 +17,12 @@ const StripPayment = ({ price }) => {
   const StripePrice = price * 100;
 
   const onToken = ( token ) => {
-
-    if ( token ) {
-      setReturnToken( token );
-      console.log({returnToken});
-      resetCart();
-      history.push('/')
-    }
+    setReturnToken( token );
+    resetCart();
+    return history.push('/');
   }
-
+  
+  console.log({returnToken});
   return (
     <StripeCheckout 
       lable="Pay Nom"
