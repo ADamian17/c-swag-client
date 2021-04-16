@@ -8,33 +8,13 @@
     height: 20px;
     border-radius: 50%;
     position: fixed;
-    top: 0.2rem;
-    left: 52.5%;
+    top: 0.3rem;
+    left: 52.2%;
     background-color: #a52a2a;
     color: #f0f8ff;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.4rem;
-  }
-
-  &__preview {
-    width: 40rem;
-    padding: 1.2rem;
-    min-height: 10rem;
-    background-color: $default-color-light;
-    border-radius: .4rem;
-    box-shadow: 0 0 .3rem $default-color-dark;
-
-    position: absolute;
-    top: 4rem;
-
-    &__list {
-      background-color: inherit;
-      min-height: 10rem;
-      display: flex;
-      flex-direction: column
-    }
   }
   
   &__link {
@@ -50,6 +30,7 @@
   }
 
   &__empty {
+    width: 15rem;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,28 +1,16 @@
 @import '../../../sass/abstracts/variables';
 
+.my-card-img {
+  height: 22.5rem !important;
+}
+
+.price {
+  color: #f49a0b !important;
+}
+
 .card__link,
 .card__link:visited,
 .card__link:active {
   text-decoration: none;
   color: $default-color-dark; 
-}
-
-.card {
-  width: 35rem;
-  height: 55rem;
-
-  small {
-    color: #f49a0b !important;
-  }
-}
-
-.image-container {
-  width: 100%;
-  height: 80%;
-  overflow: hidden;
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
 }

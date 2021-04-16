@@ -20,21 +20,19 @@ const ProductCard = ({ product }) => {
 
   return (
     <Col className="mb-5">
-      <Card className="p-4 shadow-sm">
-        <div className="image-container mb-4">
-          <img className="card-image" src={product.image} alt="avatar" />
-        </div>
+      <Card className="p-3 shadow-sm">
+        <img className="my-card-img img-fluid img-thumbnail border-0 mb-3" src={product.image} alt="avatar" />
 
-        <div className="card-body border-top">
-          <Link to={`/products/${product.id}`}>
+        <Card.Body className="border-top">
+          <Link className='card__link' to={`/products/${product.id}`}>
             <p className="card-text">{itemName}</p>
-            <small>{product.price} USD</small>
+            <small className="price">{product.price} USD</small>
           </Link>
 
           <div className="d-flex justify-content-end align-items-center">
             <Button onClick={handleAddToCart} className="btn btn-sm btn-primary">Add to Cart</Button>
           </div>
-        </div>
+        </Card.Body>
       </Card>
     </Col>
   )

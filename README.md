@@ -25,43 +25,8 @@
 - Commercial cart flow from a developer's perspective
 - Exposure to a payment provider's processing flow
 
-[ Data Flow ](./react.drawio)
-
 
 <!-- TODO -->
 <!-- choose a payment gateway provider (i.e. Stripe or Paypal) -->
 ### Resources
 [ api reference by fakestoreapi ](https://fakestoreapi.herokuapp.com/docs)
-
-
-<!-- ```javascript
-/* fetch example */
-const [ allMakeup, setAllMakeup ] = useState([]);
-
-  useEffect(() => {
-    fetMakeup()
-  }, [])
-
-  const fetMakeup = async () => {
-    try {
-
-      const res = await fetch("https://makeup.p.rapidapi.com/products.json", {
-        headers: {
-          "x-rapidapi-key": "15e17ee08dmsh62fb1686560c453p107df8jsn42ae32d3fd24",
-          "x-rapidapi-host": "makeup.p.rapidapi.com",
-          "useQueryString": true
-        }
-      });
-
-      const data = await res.json();
-
-      const lipLiner = data.filter((item) => item.category === 'pencil' );
-      console.log({lipLiner});
-
-      setAllMakeup(lipLiner);
-      
-    } catch (error) {
-      
-    }
-  }
-``` -->
