@@ -1,4 +1,9 @@
 # AD-SWAG Clothing
+<h3>
+Demo:
+<a href="http://www.adswagstore.com/"> http://www.adswagstore.com</a>
+</h3>
+
 ### User Stories
 - User will land in the main gallery
 - in the gallery the user will see all products
